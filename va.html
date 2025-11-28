@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            color: #0d2538;
         }
         header {
             background: #0077cc;
@@ -23,16 +24,17 @@
             max-width: 900px;
             margin: auto;
         }
-        h2 {
-            color: #0077cc;
-        }
+        h2 { color: #0077cc; margin-bottom: 6px; }
+        h3 { margin: 8px 0; color: #005f99; }
         .card {
             background: white;
-            padding: 15px;
+            padding: 18px;
             margin: 15px 0;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
         }
+        ul { margin-left: 1.1rem; }
+        small { color: #586a75; }
         footer {
             background: #003d66;
             color: white;
@@ -40,6 +42,8 @@
             padding: 10px;
             margin-top: 30px;
         }
+
+        /* Botón flotante estilo burbuja */
         #chatButton {
             position: fixed;
             bottom: 25px;
@@ -56,14 +60,10 @@
             z-index: 9999;
             transition: transform 0.2s;
         }
-        #chatButton:hover {
-            transform: scale(1.1);
-        }
-        #chatButton img {
-            width: 40px;
-            height: 40px;
-            filter: brightness(0) invert(1);
-        }
+        #chatButton:hover { transform: scale(1.1); }
+        #chatButton img { width: 40px; height: 40px; filter: brightness(0) invert(1); }
+
+        /* Botón dentro del contenido */
         .chatLinkBtn {
             display: inline-block;
             padding: 12px 20px;
@@ -75,12 +75,122 @@
             margin-top: 15px;
             transition: background 0.3s;
         }
-        .chatLinkBtn:hover {
-            background-color: #005fa3;
+        .chatLinkBtn:hover { background-color: #005fa3; }
+
+        .note {
+            background: #eaf4ff;
+            border-left: 4px solid #0077cc;
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
 <header>
-</header>   
+    <h1>Enfermedades Venéreas (ETS/ITS)</h1>
+    <p>Información general sobre las principales infecciones de transmisión sexual</p>
+</header>
+
+<section>
+    <h2>¿Qué son las enfermedades venéreas?</h2>
+    <p>
+        Las enfermedades venéreas o ITS (infecciones de transmisión sexual) son infecciones transmitidas
+        principalmente por contacto sexual (vaginal, anal u oral). Las causas pueden ser bacterias, virus o parásitos.
+        Muchas ITS pueden no mostrar síntomas al principio; por eso la detección mediante pruebas es clave.
+    </p>
+
+    <!-- Botón dentro de la página -->
+    <a href="https://www.stack-ai.com/chat/692110659dfda1c0eeadee02-3hSsR64OXSknhmOkPJSuwA" 
+       class="chatLinkBtn" target="_blank" rel="noopener">
+       Abrir Asistente ITS
+    </a>
+
+    <h2>Principales ITS (ampliadas)</h2>
+
+    <div class="card" id="vih">
+        <h3>VIH (Virus de la Inmunodeficiencia Humana)</h3>
+        <p><strong>Descripción:</strong> Virus que ataca el sistema inmunitario. Sin tratamiento puede evolucionar a SIDA.</p>
+        <p><strong>Síntomas comunes:</strong> algunos presentan una enfermedad parecida a la gripe en las primeras semanas; muchas personas permanecen asintomáticas durante años.</p>
+        <p><strong>Pruebas:</strong> test de anticuerpos/antígenos (ELISA/Prueba rápida) y carga viral para seguimiento.</p>
+        <p><strong>Tratamiento:</strong> terapia antirretroviral (TAR o ARV). El tratamiento efectivo reduce la carga viral hasta niveles indetectables (U=U).</p>
+        <p><strong>Posible cura:</strong> actualmente no existe una cura establecida; investigaciones continúan.</p>
+        <p><strong>Prevención:</strong></p>
+        <ul>
+            <li>Uso correcto de preservativos.</li>
+            <li>PrEP para personas en riesgo.</li>
+            <li>PEP dentro de 72 horas tras exposición.</li>
+            <li>Carga viral indetectable en quienes viven con VIH reduce transmisión.</li>
+        </ul>
+        <div class="note"><small>El manejo del VIH es crónico y requiere supervisión profesional.</small></div>
+    </div>
+
+    <div class="card" id="sifilis">
+        <h3>Sífilis</h3>
+        <p><strong>Descripción:</strong> Infección bacteriana que progresa en fases (primaria, secundaria, latente y terciaria).</p>
+        <p><strong>Síntomas:</strong> úlcera indolora inicial; luego erupciones, fiebre y síntomas sistémicos.</p>
+        <p><strong>Pruebas:</strong> pruebas serológicas treponémicas y no treponémicas.</p>
+        <p><strong>Tratamiento:</strong> penicilina G (curable si se detecta a tiempo).</p>
+        <p><strong>Prevención:</strong> preservativos, cribado en embarazo y tratamiento de parejas.</p>
+    </div>
+
+    <div class="card" id="gonorrea">
+        <h3>Gonorrea</h3>
+        <p><strong>Descripción:</strong> Infección bacteriana que afecta genitales, recto y garganta.</p>
+        <p><strong>Síntomas:</strong> secreción, dolor al orinar; puede ser asintomática.</p>
+        <p><strong>Pruebas:</strong> NAAT o cultivos.</p>
+        <p><strong>Tratamiento:</strong> ceftriaxona según guías actuales (por resistencia antimicrobiana).</p>
+        <p><strong>Prevención:</strong> preservativos y pruebas periódicas.</p>
+    </div>
+
+    <div class="card" id="clamidia">
+        <h3>Clamidia</h3>
+        <p><strong>Descripción:</strong> Muy común y a menudo asintomática.</p>
+        <p><strong>Síntomas:</strong> dolor al orinar, secreción; posible EIP en mujeres.</p>
+        <p><strong>Pruebas:</strong> NAAT en orina o hisopado.</p>
+        <p><strong>Tratamiento:</strong> doxiciclina o alternativas.</p>
+        <p><strong>Prevención:</strong> preservativos y cribado en menores de 25 años.</p>
+    </div>
+
+    <div class="card" id="vph">
+        <h3>Virus del Papiloma Humano (VPH)</h3>
+        <p><strong>Descripción:</strong> Virus muy común; algunos causan verrugas, otros aumentan riesgo de cáncer.</p>
+        <p><strong>Síntomas:</strong> verrugas genitales en algunos tipos; muchas infecciones son asintomáticas.</p>
+        <p><strong>Pruebas:</strong> citología/PAP y test de VPH en mujeres.</p>
+        <p><strong>Tratamiento:</strong> manejo de lesiones (crioterapia, electrocirugía).</p>
+        <p><strong>Prevención:</strong> vacunación y uso de preservativos.</p>
+    </div>
+
+    <div class="card" id="herpes">
+        <h3>Herpes genital</h3>
+        <p><strong>Descripción:</strong> infección crónica con brotes recurrentes.</p>
+        <p><strong>Síntomas:</strong> ampollas y llagas dolorosas.</p>
+        <p><strong>Pruebas:</strong> PCR, cultivo o serología.</p>
+        <p><strong>Tratamiento:</strong> antivirales para reducir frecuencia y severidad.</p>
+        <p><strong>Prevención:</strong> evitar contacto durante brotes y usar preservativos.</p>
+    </div>
+
+    <div class="card">
+        <h3>Pruebas, tratamiento y conducta ante sospecha</h3>
+        <ul>
+            <li>Consultar con un centro de salud ante síntomas o riesgo.</li>
+            <li>No automedicarse.</li>
+            <li>Tratar también a parejas sexuales.</li>
+            <li>En embarazo: comunicar al profesional de salud inmediatamente.</li>
+        </ul>
+    </div>
+
+</section>
+
+<footer>
+    <p>Información educativa sobre ITS · © 2025 · No sustituye la consulta médica</p>
+</footer>
+
+<!-- 🔵 Botón flotante -->
+<div id="chatButton" onclick="window.open('https://www.stack-ai.com/chat/692110659dfda1c0eeadee02-3hSsR64OXSknhmOkPJSuwA', '_blank')" title="Abrir Asistente ITS">
+    <img src="https://cdn-icons-png.flaticon.com/512/893/893268.png" alt="Chat ITS">
+</div>
+
+</body>
+</html>
